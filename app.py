@@ -30,7 +30,7 @@ def init_db():
                 ],
             )
 
-
+#page d'acceil(home)
 @app.route("/")
 def home():
     return {"message": "API des notes des etudiants"}
