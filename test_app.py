@@ -31,3 +31,8 @@ def test_filter_notes_by_etudiant():
     assert len(response.json) == 1
     assert response.json[0]["etudiant"] == "Amina"
     assert response.json[0]["note"] == 15.5
+
+def test_health_version():
+    response = client.get("/health")
+    assert response.status_code == 200
+    assert response.json == {"status": "ok", "version": "1.0"}
